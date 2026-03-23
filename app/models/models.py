@@ -24,6 +24,7 @@ class tables:
     SETTINGS = "settings"
     RESUMECACHE = "resumecache"
     SOME = "someTable"
+    TEST = "test"
 
 def CreateUUID():
     """
@@ -139,6 +140,12 @@ class something(Base):
     chunk_type = Column(String, nullable=False)
     chunked_data = Column(JSON,nullable=False)
 
+class test(Base):
+    __tablename__ = tables.TEST
+    id = Column(String, default=CreateUUID, primary_key=True)
+    name = Column(String, nullable=False)
+    phone = Column(String, nullable=False)
+
 class schemas:
     USERS = users
     RBAC = RBACUsers
@@ -147,7 +154,7 @@ class schemas:
     SETTINGS = Settings
     RESUMECACHE = ChunkedCacheResume
     SOME = something
-
+    TEST = test
     def __init__(self):
         self.attrs = [x for x in dir(self) if not x.startswith('__')]
         self.index = 0

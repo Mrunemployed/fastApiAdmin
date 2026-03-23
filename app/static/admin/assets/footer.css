@@ -1,0 +1,99 @@
+.nexovius-footer {
+  background: #000;
+  color: #fff;
+  padding: 48px 16px 48px 16px;
+  font-family: 'Inter', Arial, sans-serif;
+  width: 100%;
+  box-sizing: border-box;
+}
+.footer-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.footer-left {
+  display: flex;
+  align-items: center;
+}
+.footer-logo {
+  height: 100px;
+  width: auto;
+  max-width: 240px;
+  margin-right: 24px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.25);
+  transition: transform 0.2s;
+}
+.footer-logo:hover {
+  transform: scale(1.05);
+}
+.footer-links {
+  display: flex;
+  gap: 24px;
+}
+.footer-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.1em;
+  transition: color 0.2s;
+}
+.footer-links a:hover {
+  color: #aaa;
+}
+.footer-bottom {
+  text-align: center;
+  margin-top: 32px;
+  margin-bottom: 32px;
+  letter-spacing: 0.15em;
+  font-size: 0.95em;
+  opacity: 0.9;
+  line-height: 1.7;
+}
+.footer-contrib-text {
+  color: #aaa;
+  font-size: 0.95em;
+}
+.footer-nexovius-link {
+  display: inline-block;
+  margin-top: 4px;
+  font-size: 1.05em;
+  font-weight: bold;
+  color: #fff;
+  letter-spacing: 0.35em;
+  text-align: center;
+  text-decoration: none;
+}
+.footer-nexovius-link:hover {
+  color: #3b82f6;
+}
+@media (max-width: 600px) {
+  .footer-content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+  .footer-links {
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  .footer-logo {
+    height: 36px;
+    margin-bottom: 8px;
+  }
+}
+/* Ensure the page fills the viewport and footer stays at the bottom if content is short */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.main-content {
+  flex: 1;
+} 
